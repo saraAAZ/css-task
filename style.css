@@ -25,9 +25,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-color: white;
 }
-
 .exit-container span{
     font-size: 10px;
     padding-right: 3px;
@@ -98,7 +96,7 @@ section form {
 .dev-name>i{
     font-family:"Font Awesome 5 Free";
     font-size: 18px;
-    color: rgb(99, 99, 99);
+    color:rgb(232, 227, 227);
     font-weight: 900;
     padding-right: 5px;
     padding-top: 2.5px;
