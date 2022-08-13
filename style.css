@@ -12,7 +12,7 @@ body{
 }
 main{
     width: 30%;
-    height: 430px;
+    height: 450px;
     margin-top: 50px;
     border: 1px solid rgb(219, 218, 218);
     border-radius: 4px;
@@ -26,13 +26,19 @@ main{
     flex-direction: column;
     align-items: flex-end;
 }
-.exit-container i {
-    font-size:12px ;
-}
+
 .exit-container span{
     font-size: 10px;
+    padding-right: 3px;
 } 
+.exit{
+    font-size: 30px;
+}
 .exit:hover{
+    font-size: 33px; 
+    transition: all 0.5s ease;
+}
+.exit-hover:hover{
     color: red;
     cursor: pointer;
 }
@@ -50,27 +56,92 @@ section{
     margin-bottom: 10px;
 }
 .search i{
-    padding-right: 8px;
+    padding: 2px 4px;
+    font-weight: 700;
+    font-size: 20px;
+    font-weight: 900;
 }
 .search input{
     border: none;
     width: 300px;
     outline: none;
+    line-height: 26px;
+    letter-spacing: .8px;
     /* padding: 2px; */
 }
 section form {
     width: 96%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+   
+}
+.dev-name{
+    display: flex;
+    flex-direction: row;
     border: 1px solid  rgb(219, 218, 218);
     border-radius: 5px;
     padding: 5px;
+    transition: border ease-in-out 1s;
     margin-bottom: 10px;
 }
-.dev-name label>input{
-    border: none;
-    background-color: white;
+.dev-name:hover{
+    font-weight: bold;
+    border: 2px solid  rgb(79, 78, 78);
+
+}
+.dev-name>i{
+    padding-right: 5px;
+    padding-top: 3.5px;
+}
+.dev-name{
+    width: 100%;
+}
+.inner_dev{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.inner_dev >label{
+    font-size: 16px;
+}
+input[type="checkbox"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color:rgb(232, 227, 227);
+    border-radius: 50%;
+    vertical-align:bottom ;
+    cursor: pointer;
+}
+input[type="checkbox"]:after{
+    font-family:"Font Awesome 5 Free";
+    font-size: 10px;
+    content: "\f00c";
+    color: rgb(71, 217, 71);
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+    padding-top: 5.5px;
+    display: none;
+}
+input[type="checkbox" ]:hover{
+    background-color: rgb(144, 144, 144);
+    transition: ease-in-out 1s;
+}
+input[type="checkbox"]:checked{
+    background-color:rgb(245, 243, 243);
+}
+input[type="checkbox"]:checked::after{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5.5px;
 }
 .option{
     display: flex;
@@ -96,5 +167,7 @@ section form {
 }
 #save:hover{
     cursor: pointer;
+    /* transition: all 0.5s ease; */
     background: linear-gradient(-90deg,rgb(121, 121, 187),rgb(0, 90, 128));
+    
 }
