@@ -5,14 +5,14 @@
 }
 body{
     width: 100%;
-    height: 100vh;
     font-family: 'Source Sans Pro', sans-serif;
     display: flex;
     justify-content: center;
 }
 main{
-    width: 30%;
-    height: 450px;
+    min-width: 300px;
+    max-width: 550px;
+    height: fit-content;
     margin-top: 50px;
     border: 1px solid rgb(219, 218, 218);
     border-radius: 4px;
@@ -51,7 +51,6 @@ h1{
     font-weight: 800;
 }
 section{
-    width: 300px;
     margin: 0 auto;
 }
 .search{
@@ -68,7 +67,7 @@ section{
 }
 .search input{
     border: none;
-    width: 300px;
+    flex-grow: 1;
     outline: none;
     line-height: 26px;
     letter-spacing: .8px;
@@ -93,6 +92,11 @@ section form {
     font-weight: bold;
     border: 2px solid  rgb(79, 78, 78);
 }
+.dev-name:focus * {
+    font-weight: 900;
+    color: rgb(99, 99, 99);
+    border-width: 2px;
+}
 .dev-name>i{
     font-family:"Font Awesome 5 Free";
     font-size: 18px;
@@ -104,14 +108,12 @@ section form {
 .dev-name{
     width: 100%;
 }
-.inner_dev{
+.inner-dev{
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
 }
-.inner_dev >label{
+ label{
     font-size: 16px;
 }
 input[type="checkbox"]{
@@ -133,7 +135,7 @@ input[type="checkbox"]::after{
     align-items: center;
     justify-content: center;
     vertical-align: bottom;
-    padding-top: 5.5px;
+    height: 100%;
     display: none;
 }
 input[type="checkbox" ]:hover{
@@ -148,31 +150,30 @@ input[type="checkbox"]:checked::after{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 5.5px;
 }
-.option{
+.buttons-container{
     display: flex;
     justify-content: center;
     padding: 9px;
 }
-.option > button{
+.buttons-container > button{
     width: 100px;
     padding: 8px 20px ;
     margin-right: 8px;
     border-radius: 5px;
 }
-#chancel{
+.cancel{
     background-color: white;
     border: 1px solid  rgb(219, 218, 218);
 
 }
-#save{
+.save{
     background: linear-gradient(90deg,rgb(121, 121, 187),rgb(0, 90, 128));
     color: white;
+    cursor: pointer;
     box-shadow: rgb(112, 112, 172,22%) 0px 5px ;
     border: none;
 }
-#save:hover{
-    cursor: pointer;
+.save :hover{
     background: linear-gradient(-90deg,rgb(121, 121, 187),rgb(0, 90, 128));
 }
