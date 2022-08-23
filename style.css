@@ -126,8 +126,12 @@ input[type="checkbox"]{
     cursor: pointer;
 }
 input[type="checkbox"]::after{
+
+    cursor: pointer;
+}
+input[type="checkbox"]::after{
     font-family:"Font Awesome 5 Free";
-    font-size: 10px;
+    font-size: 11px;
     content: "\f00c";
     color: rgb(71, 217, 71);
     font-weight: 900;
@@ -146,8 +150,11 @@ input[type="checkbox"]:checked {
     background-color:rgb(245, 243, 243);
 }
 input[type="checkbox"]:checked::after{
-    display: block;
+    /* display: block; */
     display: flex;
+    border-radius: 50%;
+    border: 1.6px solid rgb(71, 217, 71);
+    height: 18px;
     align-items: center;
     justify-content: center;
 }
