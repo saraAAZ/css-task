@@ -12,7 +12,6 @@ body{
 main{
     min-width: 300px;
     max-width: 550px;
-    height: fit-content;
     margin-top: 50px;
     border: 1px solid rgb(219, 218, 218);
     border-radius: 4px;
@@ -39,12 +38,12 @@ main{
 }
 .exit:hover{
     font-size: 31px; 
-    transition: all 0.5s ease;
 }
 .exit-hover:hover{
     cursor: pointer;
     color: red;
     font-weight: 700;
+    transition: all 0.5s ease-in-out;
 }
 h1{
     font-size: 15px;
@@ -88,16 +87,18 @@ section form {
     transition: border ease-in-out .6s;
     margin-bottom: 10px;
 }
-.dev-name:hover{
-    font-weight: bold;
-    border: 2px solid  rgb(79, 78, 78);
-}
-.dev-name:focus * {
-    font-weight: 900;
+.dev-name:hover {
+    font-weight: 600;
     color: rgb(99, 99, 99);
-    border-width: 2px;
+    border: 2px solid  rgb(105, 104, 104);
 }
-.dev-name>i{
+.dev-name{
+    width: 100%;
+}
+.inner-dev{
+    width: 100%;
+}
+.inner-dev i{
     font-family:"Font Awesome 5 Free";
     font-size: 18px;
     color:rgb(232, 227, 227);
@@ -105,28 +106,18 @@ section form {
     padding-right: 5px;
     padding-top: 2.5px;
 }
-.dev-name{
-    width: 100%;
-}
-.inner-dev{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
- label{
+label{
     font-size: 16px;
+    order: 0;
 }
 input[type="checkbox"]{
+    order: 1;
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color:rgb(232, 227, 227);
+    background-color:rgb(243, 239, 239);
     border-radius: 50%;
     vertical-align:bottom ;
-    cursor: pointer;
-}
-input[type="checkbox"]::after{
-
     cursor: pointer;
 }
 input[type="checkbox"]::after{
@@ -143,17 +134,18 @@ input[type="checkbox"]::after{
     display: none;
 }
 input[type="checkbox" ]:hover{
-    background-color: rgb(144, 144, 144);
-    transition: ease-in-out .6s;
+    background-color: rgb(205, 202, 202);
+    transition: all ease-in-out .6s;
 }
-input[type="checkbox"]:checked {
-    background-color:rgb(245, 243, 243);
-}
+input[type="checkbox"]:checked +div>*{
+    font-weight: 900;
+    color: rgb(99, 99, 99);
+    transition: all 1s ease-in-out;
+} 
 input[type="checkbox"]:checked::after{
-    /* display: block; */
     display: flex;
     border-radius: 50%;
-    border: 1.6px solid rgb(71, 217, 71);
+    border: 1.5px solid rgb(71, 217, 71);
     height: 18px;
     align-items: center;
     justify-content: center;
@@ -172,7 +164,6 @@ input[type="checkbox"]:checked::after{
 .cancel{
     background-color: white;
     border: 1px solid  rgb(219, 218, 218);
-
 }
 .save{
     background: linear-gradient(90deg,rgb(121, 121, 187),rgb(0, 90, 128));
