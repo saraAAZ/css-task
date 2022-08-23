@@ -108,7 +108,6 @@ section form {
 }
 label{
     font-size: 16px;
-    order: 0;
 }
 input[type="checkbox"]{
     order: 1;
@@ -150,10 +149,10 @@ input[type="checkbox"]:checked::after{
 }
 .buttons-container{
     display: flex;
-    justify-content: center;
-    padding: 9px;
+    padding: 9px 10px 9px 40px;
 }
-.buttons-container > button{
+button{
+    height: 40px;
     width: 100px;
     padding: 8px 20px ;
     margin-right: 8px;
@@ -163,11 +162,21 @@ input[type="checkbox"]:checked::after{
     background-color: white;
     border: 1px solid  rgb(219, 218, 218);
 }
+.btn-save-container{
+    position: relative;
+}
+.btn-shadow{
+    height: 40px;
+    width: 80px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(110, 110, 171, 0.66) 0px 6px 6px -2px;
+}
 .save{
     background: linear-gradient(90deg,rgb(121, 121, 187),rgb(0, 90, 128));
     color: white;
     cursor: pointer;
-    box-shadow: rgb(112, 112, 172,22%) 0px 5px ;
+    position:absolute;
     border: none;
 }
 .save :hover{
