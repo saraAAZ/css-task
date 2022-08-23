@@ -179,6 +179,6 @@ button{
     position:absolute;
     border: none;
 }
-.save :hover{
+.save:hover{
     background: linear-gradient(-90deg,rgb(121, 121, 187),rgb(0, 90, 128));
 }
