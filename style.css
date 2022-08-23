@@ -147,8 +147,6 @@ input[type="checkbox"]:checked::after{
     border-radius: 50%;
     border: 1.5px solid rgb(71, 217, 71);
     height: 18px;
-    align-items: center;
-    justify-content: center;
 }
 .buttons-container{
     display: flex;
